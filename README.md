@@ -6,6 +6,7 @@ This project is part of an Emerging Technologies module I am completeing as part
 - MacOS Catolina
 - Jupyter notebook
 - Anaconda (http://anaconda.com)[http://anaconda.com]
+- Tensorflow `pip install tensorflow`
 - Sublime Text
 
 ## How To Run
@@ -15,7 +16,7 @@ This project is part of an Emerging Technologies module I am completeing as part
 - http://yann.lecun.com/exdb/mnist/
 
 ## Added Notes
-Tho the training set for MNIST can be downloaded from the website referenced above, i found a faster way to import it using Tensorflow.
+Tho the training set for MNIST can be downloaded from the website referenced above, I found a faster way to import it using Tensorflow in python.
 Use the following code in python granted you have everything you need installed 
 ```python
 import tensorflow as tf
