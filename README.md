@@ -6,12 +6,15 @@ On completeion of this project there will be a web a
 
 ## Work Environment 
 - MacOS Catolina
-- Jupyter notebook
 - Languages: **Python 3**
+- Sublime Text
+
+### Installing Anaconda and getting Jupyter notebook set up
+- Jupyter notebook
 - [Anaconda](http://anaconda.com)
 - [Flask](https://flask.palletsprojects.com/en/1.1.x/) 
 - [Tensorflow](https://www.tensorflow.org) <br> `pip install tensorflow`
-- Sublime Text
+
 
 ## How To Run
 
