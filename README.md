@@ -1,11 +1,11 @@
 # Hand writen character predictor using MNIST dataset
 This project is part of an Emerging Technologies module I am completeing as part of my 4th Year Study in GMIT.
-- Lecturer: Dr Ian McLoughin
+- Lecturer: **Dr Ian McLoughin
 
 ## Work Environment 
 - MacOS Catolina
 - Jupyter notebook
-- Anaconda (http://anaconda.com)[http://anaconda.com]
+- [Anaconda](http://anaconda.com)
 - Tensorflow `pip install tensorflow`
 - Sublime Text
 
