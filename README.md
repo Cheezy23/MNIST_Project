@@ -1,4 +1,4 @@
-# Hand writen character predictor using MNIST dataset
+# Hand written character predictor using MNIST dataset
 This project is part of an Emerging Technologies module I am completeing as part of my 4th Year Study in GMIT.
 
 On completeion of this project there will be a web a
