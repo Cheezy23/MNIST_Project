@@ -7,6 +7,7 @@ On completeion of this project there will be a web a
 ## Work Environment 
 - MacOS Catolina
 - Jupyter notebook
+- Languages: **Python 3**
 - [Anaconda](http://anaconda.com)
 - [Flask](https://flask.palletsprojects.com/en/1.1.x/) 
 - Tensorflow `pip install tensorflow`
@@ -17,7 +18,9 @@ On completeion of this project there will be a web a
 
 
 ## References
-- http://yann.lecun.com/exdb/mnist/
+- [MNIST Dataset](http://yann.lecun.com/exdb/mnist/)
+- [Helpful Youtube Tutorial](https://www.youtube.com/watch?v=wQ8BIBpya2k)
+- 
 
 ## Added Notes
 Tho the training set for MNIST can be downloaded from the website referenced above, I found a faster way to import it using Tensorflow in python.
