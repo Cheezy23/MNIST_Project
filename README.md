@@ -10,7 +10,7 @@ On completeion of this project there will be a web a
 - Languages: **Python 3**
 - [Anaconda](http://anaconda.com)
 - [Flask](https://flask.palletsprojects.com/en/1.1.x/) 
-- Tensorflow `pip install tensorflow`
+- [Tensorflow](https://www.tensorflow.org) <br> `pip install tensorflow`
 - Sublime Text
 
 ## How To Run
@@ -20,7 +20,9 @@ On completeion of this project there will be a web a
 ## References
 - [MNIST Dataset](http://yann.lecun.com/exdb/mnist/)
 - [Helpful Youtube Tutorial](https://www.youtube.com/watch?v=wQ8BIBpya2k)
-- 
+- [Linear Regression using Numpy](https://nbviewer.jupyter.org/github/ianmcloughlin/jupyter-teaching-notebooks/blob/master/simple-linear-regression.ipynb)
+- [Creating single nuron in Keras](https://github.com/ianmcloughlin/jupyter-teaching-notebooks/blob/master/keras-neurons.ipynb)
+- []()
 
 ## Added Notes
 Tho the training set for MNIST can be downloaded from the website referenced above, I found a faster way to import it using Tensorflow in python.
