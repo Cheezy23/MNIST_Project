@@ -1,4 +1,4 @@
-# Hand written character predictor using MNIST dataset
+# Hand Written Character Predictor using MNIST dataset
 This project is part of an Emerging Technologies module I am completeing as part of my 4th Year Study in GMIT.
 
 On completeion of this project there will be a web a
@@ -18,9 +18,13 @@ conda 4.7.12`
 - [Tensorflow](https://www.tensorflow.org) <br> `pip install tensorflow`
 
 
-## How To Run
+## How To Run Jupyter
 First start by cloning this repo to a directory on you device. You then need to make sure you have Anacona installed at version 4.7.12 or later.
-Navigate to the project directory in Terminal, then run the command `jupyter notebook` or `jupyter lab` tho I had some issues with `lab` so `notebook` is a safer option.
+Navigate to the project directory in Terminal, then run the command `jupyter notebook` or `jupyter lab` tho I had some issues with `lab` so i would advise you use `notebook` as it is a safer option.
+
+This will open up your default browser with a GUI you can use to open the MNIST_Dataset_project.ipynb in a notebook.
+
+## How to run Server and Webapp
 
 
 ## References
@@ -31,8 +35,8 @@ Navigate to the project directory in Terminal, then run the command `jupyter not
 - []()
 
 ## Added Notes
-Tho the training set for MNIST can be downloaded from the website referenced above, I found a faster way to import it using Tensorflow in python.
-Use the following code in python granted you have everything you need installed 
+Tho the training set for MNIST can be downloaded from the website referenced above, there is a faster way by using th Tensorflow library in python.
+Use the following code in python notebook
 ```python
 import tensorflow as tf
 mnistData = tf.keras.datasets.mnist;
