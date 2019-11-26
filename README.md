@@ -13,7 +13,7 @@ Lecturer: **Dr Ian McLoughin**
 There is a Graphical install version of Anaconda which can be found using the link below to get the latest version, as of making this the current stable build is `conda --version
 conda 4.7.12`
 - [Anaconda](http://anaconda.com)
-- Jupyter notebook
+- [Jupyter notebook](https://jupyter.org/)
 - [Flask](https://flask.palletsprojects.com/en/1.1.x/) 
 - [Tensorflow](https://www.tensorflow.org) <br> `pip install tensorflow`
 
