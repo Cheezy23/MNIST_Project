@@ -19,7 +19,8 @@ conda 4.7.12`
 
 
 ## How To Run
-
+First start by cloning this repo to a directory on you device. You then need to make sure you have Anacona installed at version 4.7.12 or later.
+Navigate to the project directory in Terminal, then run the command `jupyter notebook` or `jupyter lab` tho I had some issues with `lab` so `notebook` is a safer option.
 
 
 ## References
