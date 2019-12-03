@@ -1,30 +1,22 @@
 # Adapted from: https://www.palletsprojects.com/p/flask/
 # Run with: env FLASK_APP=random-wa.py flask run
 
-# For creating the web application.
+# Imports
 import flask as fl
-# For generating random numbers.
+from flask import render_template
 import numpy as np
-# For decoding images
 import base64
 
-# Create the web application.
+# Flask instance
 app = fl.Flask(__name__)
 
-# Add a route for the web page.
+# Home route for WebApp
 @app.route('/')
 def home():
-  return app.send_static_file('index.html')
+  return render_template('index.html')
 
-# Add a route for generating random numbers using POST data.
-@app.route('/random', methods=['GET', 'POST'])
-def random():
-  # Find out how many numbers the user asked to generate.
-  howmany = int(fl.request.values.get("noofnos", "1"))
-  # Generate and respond with the numbers.
-  return {"randomNos": np.random.random(howmany).tolist()}
 
-  # Add a route for generating random numbers using POST data.
+# Post route for uploading an image
 @app.route('/uploadimage', methods=['GET', 'POST'])
 def uploadimage():
   # Get the image from the request.
@@ -34,7 +26,13 @@ def uploadimage():
   # Decode the string to an image
   decodedimage = base64.b64decode(theimage[22:])
   # Try to save the image
-  with open ("theimage.png", "wb") as f:
+  with open ("drawing.png", "wb") as f:
   	f.write(decodedimage)
-  # Generate and respond with the numbers.
+  # Return a response
   return {"message": theimage}
+
+
+# Route for predict POST
+  @app.route('/predict', methods=['POST'])
+  def predict():
+    return {"message": theimage}
