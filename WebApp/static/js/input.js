@@ -13,6 +13,8 @@ var ctx = canvas.getContext("2d");
 var drawing = false;
 var mousePos = { x:0, y:0 };
 var lastPos = mousePos;
+w = canvas.height;
+h = canvas.width;
 
 ctx.strokeStyle = "#222222";
 ctx.lineWith = 2;
@@ -50,7 +52,7 @@ window.requestAnimFrame = (function (callback) {
      window.oRequestAnimationFrame ||
      window.msRequestAnimaitonFrame ||
      function (callback) {
-  window.setTimeout(callback, 1000/60);
+        window.setTimeout(callback, 1000/60);
      };
 })();
 
@@ -73,23 +75,29 @@ function renderCanvas() {
 
 
 
-
 // == Predict OnClick ==
-$("#predictButton").click(function (e) {
+$("#predictBtn").click(function (e) {
+  // Prevent the form submitting.
   e.preventDefault();
-  // Prevent the form actually submitting.
   
+  
+  // Create a dictonary to bundle data to send
+  var dataToSend = {"imageData": JSON.stringify(canvas.toDataURL())};
 
   // Print the contents of the image to the javascript console
-  console.log(canvas.toDataURL())
-
-  // Send data to server here
+  $.post("/uploadimage", dataToSend, function(data){
+    $("#predictText").text(data.message);
+  });
 });
 
 
 // == Clear canvas OnClick ==
 $("#clearBtn").click(function (e) {
-  ctx.clearRect( 0, 0, ctx.canvas.width, ctx.canvas.height);
-  console.log("Canvas cleared")
-  
+  clearCanvas();
+  console.log("Canvas cleared");
 });
+
+function clearCanvas(){
+  ctx.clearRect(0, 0, w, h);
+  document.getElementById("canvas").style.display = "none";
+}
