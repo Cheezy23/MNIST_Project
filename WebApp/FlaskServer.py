@@ -3,13 +3,14 @@
 # Run with: env FLASK_APP=random-wa.py flask run
 
 # Imports
+import json
 import flask as fl
 import numpy as np
 import base64
 import logging
 from PIL import ImageOps, Image
 from flask import render_template
-from keras.models import load_model
+
 
 HEIGHT, WIDTH = 28,28
 DIMENTIONS = HEIGHT, WIDTH
@@ -59,3 +60,9 @@ def resize_image():
     size = (28, 28)
     img = ImageOps.fit(img, DIMENTIONS, Image.ANTIALIAS)
     img.save('drawing2.png')
+
+def predict():
+  # import model
+  # get image after it is resized
+  # run the prediction and return the digit it gives
+  return 5
