@@ -86,7 +86,9 @@ $("#predictBtn").click(function (e) {
 
   // Print the contents of the image to the javascript console
   $.post("/uploadimage", dataToSend, function(data){
-    $("#predictText").text(data.message);
+    // Display data to console when it is recieved from the server
+    console.log(data);
+    $("#predictionText").text(data["prediction"]);
   });
 });
 
@@ -98,6 +100,5 @@ $("#clearBtn").click(function (e) {
 });
 
 function clearCanvas(){
-  ctx.clearRect(0, 0, w, h);
-  document.getElementById("canvas").style.display = "none";
+  canvas.width = canvas.width;
 }

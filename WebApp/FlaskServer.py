@@ -8,9 +8,11 @@ import numpy as np
 import base64
 import tensorflow as tf
 import logging
-from tensorflow import keras
+import keras
+import json
 from PIL import ImageOps, Image
 from flask import render_template
+from keras.models import model_from_json
 
 
 HEIGHT, WIDTH = 28,28
@@ -43,16 +45,19 @@ def uploadimage():
   with open ("drawing.png", "wb") as f:
   	f.write(decodedimage)
   
+  # Load saved model and add weights
   model = load_model()
+
   # resize image so it can be tested against the model
   image_to_predict = reshape_image()
 
-
+  # Get prediction and save it as prediction_array
   prediction_array = model.predict(image_to_predict)
   prediction = np.argmax(prediction_array)
   
+  print(prediction)
   # Return a response
-  return {"prediction": prediction}
+  return {"prediction": str(prediction)}
 
 
 def reshape_image():
@@ -65,13 +70,17 @@ def reshape_image():
 
 def load_model():
   # import model
-  json_model = open('model/model.json','r')
+  json_model = open('model.json','r')
   load_model_json = json_model.read()
   json_model.close()
-  loaded_model = keras.models.model_from_json(load_model_json)
+  loaded_model = tf.keras.models.model_from_json(load_model_json)
 
-  loaded_model.load_weights('model/model.h5')
+  loaded_model.load_weights('model.h5')
+
+  print("MODEL LOADED")
   return loaded_model
+  
+  
 
 def predict(model, image_array):
   prediction_array = model.predict(image_array)
