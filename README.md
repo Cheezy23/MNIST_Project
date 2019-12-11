@@ -4,6 +4,14 @@ This project is part of an Emerging Technologies module I am completeing as part
 On completeion of this project there will be a web a
 Lecturer: **Dr Ian McLoughin**
 
+
+## MNIST
+The MNISt dataset is made up of 60'000 training images and 10'000 test images. It is widly used in the field of nural networks for training and testing. Another great use is in image processing systems to recognise handwritten digits.
+The dataset is made up of 70'000 hand written digits between 0-9 that you can use to train a nural network to be able to predict what hand written number you have given it.
+
+Obviously this takes a bit of work, so as part of my college module, Emerging Technologies, the class was given this solo project to do to show how to create a Nural Network and as an addition also create a flask server to alow a user to draw a digit in a canvas and predict its value.
+
+
 ## Work Environment 
 - MacOS Catolina
 - Languages: **Python 3**
@@ -19,12 +27,17 @@ conda 4.7.12`
 
 
 ## How To Run Jupyter
-First start by cloning this repo to a directory on you device. You then need to make sure you have Anacona installed at version 4.7.12 or later.
-Navigate to the project directory in Terminal, then run the command `jupyter notebook` or `jupyter lab` tho I had some issues with `lab` so i would advise you use `notebook` as it is a safer option.
+- First start by cloning this repo to a directory on you device. You then need to make sure you have Anacona installed at version 4.7.12 or later.
+- Navigate to the project directory in Terminal, then run the command `jupyter notebook` or `jupyter lab` tho I had some issues with `lab` so i would advise you use `notebook` as it is a safer option.
 
 This will open up your default browser with a GUI you can use to open the MNIST_Dataset_project.ipynb in a notebook.
 
 ## How to run Server and Webapp
+### Step 1
+- Navigate to the WebApp directory in the main project folder using `Terminal`
+- When in the WebApp dir run the following command `export FLASK_APP=FlaskServer.py`
+- Straight after enter `flask run`
+- It should now say by default that it is ` * Running on http://127.0.0.1:5000/`
 
 
 ## References
@@ -34,12 +47,3 @@ This will open up your default browser with a GUI you can use to open the MNIST_
 - [Creating single nuron in Keras](https://github.com/ianmcloughlin/jupyter-teaching-notebooks/blob/master/keras-neurons.ipynb)
 - []()
 
-## Added Notes
-Tho the training set for MNIST can be downloaded from the website referenced above, there is a faster way by using th Tensorflow library in python.
-Use the following code in python notebook
-```python
-import tensorflow as tf
-mnistData = tf.keras.datasets.mnist;
-```
-
-## Breakdown 
