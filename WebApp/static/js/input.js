@@ -88,7 +88,8 @@ $("#predictBtn").click(function (e) {
   $.post("/uploadimage", dataToSend, function(data){
     // Display data to console when it is recieved from the server
     console.log(data);
-    $("#predictionText").text(data["prediction"]);
+    console.log(canvas.toDataURL());
+    $("#predictionText").text("Prediction: "+data["prediction"]);
   });
 });
 
